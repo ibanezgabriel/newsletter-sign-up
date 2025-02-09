@@ -1,0 +1,121 @@
+*::before, *::after, * {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto Bold";
+  src: url(../assets/fonts/Roboto-Bold.ttf);
+}
+:root {
+  --clr-primary: hsl(4, 100%, 67%);
+  --clr-dark-slate-grey: hsl(234, 29%, 20%);
+  --clr-charcoal-grey: hsl(235, 18%, 26%);
+  --clr-grey: hsl(231, 7%, 60%);
+  --clr-white: hsl(0, 0%, 1000%);
+  --fs: 16px;
+  --ff-roboto: "Roboto";
+  --ff-roboto-bold: "Roboto Bold";
+}
+
+.form {
+  font-family: var(--ff-roboto);
+  background-color: var(--clr-white);
+}
+.form__illustration {
+  width: 100%;
+}
+.form__illustration img {
+  width: 100%;
+}
+@media (min-width: 700px) {
+  .form__illustration img {
+    width: auto;
+    max-width: 100%;
+  }
+}
+.form__content {
+  margin: 1rem 1.5rem;
+  font-size: var(--fs);
+}
+.form__content h1 {
+  font-size: calc(var(--fs) * 2.5);
+  font-family: var(--ff-roboto-bold);
+  margin-bottom: 1rem;
+}
+.form__content ul {
+  margin: 1rem 1.5rem;
+  list-style-image: url(../assets/images/icon-list.svg);
+}
+.form__content ul li {
+  margin: 0.5rem 0;
+}
+.form__content form {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form__content form label {
+  font-size: calc(var(--fs) / 1.2);
+  font-family: var(--ff-roboto-bold);
+}
+.form__content form input {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--clr-grey);
+  font-size: var(--fs);
+  margin: 0.5rem 0;
+  color: var(--clr-grey);
+}
+.form__content form button {
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  background-color: var(--clr-dark-slate-grey);
+  color: var(--clr-white);
+  font-family: var(--ff-roboto-bold);
+  margin-top: 0.5rem;
+}
+
+.attribution {
+  text-align: center;
+  font-size: calc(var(--fs) / 1.2);
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-charcoal-grey);
+  }
+  body .form {
+    width: 650px;
+    border-radius: 1rem;
+  }
+  body .form__sign-up {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0.5rem;
+  }
+  body .form__content {
+    width: 60%;
+  }
+  body .attribution {
+    margin: 1rem 0;
+    color: var(--clr-white);
+    font-size: var(--fs);
+  }
+  body .attribution a {
+    color: var(--clr-white);
+  }
+}
+
+/*# sourceMappingURL=output.css.map */
